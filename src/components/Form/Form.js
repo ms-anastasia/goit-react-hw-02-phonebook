@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FormHeader, FormInput, FormButton } from "./Form.styled";
 
 class Form extends Component {
   state = {
@@ -27,9 +28,9 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <FormHeader>
           Имя
-          <input
+          <FormInput
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -38,10 +39,10 @@ class Form extends Component {
             value={this.state.name}
             onChange={this.handleChange}
           />
-        </label>
-        <label>
+        </FormHeader>
+        <FormHeader>
           Номер
-          <input
+          <FormInput
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -50,8 +51,8 @@ class Form extends Component {
             value={this.state.number}
             onChange={this.handleChange}
           />
-        </label>
-        <button type="submit">Отправить</button>
+        </FormHeader>
+        <FormButton type="submit">Отправить</FormButton>
       </form>
     );
   }

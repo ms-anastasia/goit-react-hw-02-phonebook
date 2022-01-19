@@ -1,10 +1,11 @@
 import React from 'react';
+import { FilterHeader, FilterInput } from "./Filter.styled";
 
 const Filter = ({ value, onChange }) => (
-  <label>
-    Find contacts by name
-    <input type="text" value={value} onChange={onChange} />
-  </label>
+  <FilterHeader>
+    Найти контакт по имени
+    <FilterInput type="text" value={value} onChange={onChange} />
+  </FilterHeader>
 );
 
 export default Filter;

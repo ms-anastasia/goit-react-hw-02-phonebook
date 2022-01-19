@@ -1,7 +1,8 @@
 import React from "react";
+import { MainHeader } from "./Header.styled";
 
 function Header() {
-  return <h1>PhoneBook</h1>;
+  return <MainHeader>PhoneBook</MainHeader>;
 }
 
 export default Header;
